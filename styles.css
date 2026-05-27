@@ -54,10 +54,12 @@ header {
 a {
   text-decoration: none;
   color: #828282;
+  transition: text-shadow 0.3s ease;
 }
 
 a:hover {
   color: #070707;
+  text-shadow: 0 0 1px currentColor;
 }
 
 :active {
@@ -181,7 +183,11 @@ footer {
   border-radius: 22px;
   margin-top: 60px;
   margin-bottom: 30px;
-  
+}
+
+.contact-button:hover {
+  background-color: #3d3d3d;
+  transform: scale(1.05);
 }
 
 .socials {
@@ -191,7 +197,17 @@ footer {
 }
 .social-link-icon {
   width: 40px;
-  height: 40px;  
+  height: 40px; 
+ 
+}
+
+.socials-link {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.socials-link:hover {
+  opacity: 0.5;
 }
 
 .contact-text {
