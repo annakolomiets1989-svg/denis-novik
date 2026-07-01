@@ -6,6 +6,13 @@ body {
   font-size: 18px;
   line-height: 1.5;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 ul,
 h1,
 h2,
@@ -18,101 +25,97 @@ li {
   list-style: none;
 }
 
-.container {
-  max-width: 970px;
-  margin: 0 auto;
-  position: relative;
-}
-
-section {
-  scroll-margin-top: 70px;
-  box-sizing: border-box;
-  padding: 100px 0;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #fff;
-  z-index: 100;
-
-} 
-
-main {
-    padding-top: 90px;
-}
-
-.menu-toggle {
-    display: none;
-}
-
-.burger {
-    display: none;
-    width: 32px;
-    height: 24px;
-    cursor: pointer;
-    position: absolute;
-    top: 25px;
-    right: 20px;
-    z-index: 101;
-}
-
-.burger span {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background: #070707;
-    margin-bottom: 6px;
-    transition: .3s;
-}
-
-.burger span:last-child {
-    margin-bottom: 0;
-}
-
-.nav {
-    border-bottom: 1px solid #828282;
-    width: 100%;
-    padding: 25px 0;
-}
-
-.nav-menu {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
   text-decoration: none;
   color: #828282;
-  transition: text-shadow 0.3s ease;
+  transition: color .3s;
 }
 
-a:hover {
+a:hover,
+a:focus {
   color: #070707;
-  text-shadow: 0 0 1px currentColor;
 }
 
 a:active {
   color: #070707;
 }
 
-.hero {
-  padding: 0;
-}
-.hero-title {
-  font-weight: 700;
-  font-size: 48px;
-  margin-bottom: 50px; 
+.container {
+  width: 100%;
+  max-width: 970px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.about {
-  text-align: center;
-  padding: 100px 245px;
-  background-color: #f6f6f6;
+section {
+  padding: 100px 0;
+  scroll-margin-top: 80px;
 }
+
+/* ================= HEADER ================= */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1000;
+}
+
+.header-container {
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.nav {
+  border-bottom: 1px solid #828282;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 25px 0;
+}
+
+.burger {
+  display: none;
+}
+
+/* ================= MAIN ================= */
+
+main {
+  padding-top: 80px;
+}
+
+.hero {
+  padding-top: 0;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+/* ================= ABOUT ================= */
+
+.about {
+  background: #f6f6f6;
+  text-align: center;
+  padding: 100px 0;
+}
+
 .section-title {
   font-size: 34px;
   font-weight: 700;
@@ -120,13 +123,19 @@ a:active {
 }
 
 .about-content {
+  max-width: 480px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
+
+/* ================= SKILLS ================= */
+
 .skills {
   text-align: center;
 }
+
 .skills-container {
   display: flex;
   flex-direction: column;
@@ -140,33 +149,38 @@ a:active {
 .skills-list {
   display: flex;
   justify-content: center;
-  gap: 97px;
+  gap: 90px;
+  flex-wrap: wrap;
 }
 
 .skills-item {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
-.skills-item > img {
+.skills-item img:first-child {
   margin-bottom: 25px;
 }
+
 .skills-icon {
-  height: 80px;
   width: 80px;
-}
-.skills-figma-icon {
   height: 80px;
-  width: 53.33px;
 }
-.skills-item > span {
+
+.skills-figma-icon {
+  width: 53px;
+  height: 80px;
+}
+
+.skills-item span {
   margin-bottom: 60px;
 }
 
+/* ================= PORTFOLIO ================= */
+
 .portfolio {
-  background-color: #f6f6f6;
+  background: #f6f6f6;
   text-align: center;
 }
 
@@ -176,51 +190,46 @@ a:active {
   gap: 70px;
 }
 
-.portfolio-item > a {
+.portfolio-item a {
   display: inline-block;
   margin-top: 40px;
-  color: #070707;
   text-decoration: underline;
+  color: #070707;
 }
+
+/* ================= FOOTER ================= */
 
 footer {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 60px;
 }
 
 .footer-container {
-  max-width: 280px;
+  max-width: 320px;
   text-align: center;
+  padding: 100px 20px;
 }
 
 .footer-title {
-  margin-top: 100px;
-  margin-bottom: 20px;
-  font-weight: 700;
   font-size: 34px;
-}
-
-.socials {
-  text-align: center;
+  margin-bottom: 20px;
 }
 
 .contact-button {
-  background-color: #070707;
-  color: #ffffff;
   width: 180px;
   height: 44px;
-  font-weight: 700;
+  margin: 60px 0 30px;
+  border: none;
   border-radius: 22px;
-  margin-top: 60px;
-  margin-bottom: 30px;
+  background: #070707;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .3s;
 }
 
 .contact-button:hover {
-  background-color: #3d3d3d;
-  transform: scale(1.05);
+  background: #3d3d3d;
 }
 
 .socials {
@@ -228,99 +237,131 @@ footer {
   justify-content: center;
   gap: 50px;
 }
+
 .social-link-icon {
   width: 40px;
-  height: 40px; 
- 
+  height: 40px;
 }
 
 .socials-link {
-  opacity: 1;
-  transition: opacity 0.3s ease;
+  transition: opacity .3s;
 }
 
 .socials-link:hover {
-  opacity: 0.5;
+  opacity: .5;
 }
 
 .contact-text {
-  font-size: 14px;
   margin-top: 60px;
   color: #828282;
+  font-size: 14px;
 }
+
+/* ================= TABLET ================= */
+
+@media (max-width: 992px) {
+
+  .about {
+    padding: 80px 20px;
+  }
+
+  .skills-list {
+    gap: 50px;
+  }
+
+}
+
+/* ================= MOBILE ================= */
 
 @media (max-width:768px){
 
-    header{
-        height:70px;
-    }
+  main{
+    padding-top:70px;
+  }
 
-    main{
-        padding-top:70px;
-    }
+  .burger{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
 
-    .burger{
-        display:flex;
-        flex-direction:column;
-        justify-content:space-between;
+    position:fixed;
+    top:20px;
+    right:20px;
 
-        position:fixed;
-        top:22px;
-        right:20px;
+    width:34px;
+    height:24px;
 
-        width:34px;
-        height:24px;
+    cursor:pointer;
 
-        z-index:1001;
-    }
+    z-index:1002;
+  }
 
-    .burger span{
-        width:100%;
-        height:3px;
-        background:#070707;
-        transition:.35s;
-    }
+  .burger span{
+    width:100%;
+    height:3px;
+    background:#070707;
+    transition:.3s;
+  }
 
-    .nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: #fff;
-        border: none;
-        padding: 100px 25px;
-        transform: translateX(100%);
-        transition: transform 0.35s ease;
-        z-index: 1000;
-        box-sizing: border-box;
-}
+  .nav{
+    position:fixed;
+    inset:0;
 
-    .nav-menu{
-        display:flex;
-        flex-direction:column;
-        align-items:flex-start;
-        gap:45px;
-    }
+    background:#fff;
 
-    .nav-item a{
-        font-size:34px;
-        font-weight:700;
-    }
+    border:none;
 
-    .menu-toggle:checked ~ .nav {
-    transform: translateX(0);
-    }
+    transform:translateX(100%);
+    transition:transform .35s ease;
 
-    .menu-toggle:checked + .burger span:nth-child(1){
-        transform:translateY(10px) rotate(45deg);
-    }
+    z-index:1001;
+  }
 
-    .menu-toggle:checked + .burger span:nth-child(2){
-        opacity:0;
-    }
+  .nav-menu{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:45px;
 
-    .menu-toggle:checked + .burger span:nth-child(3){
-        transform:translateY(-11px) rotate(-45deg);
-    }
+    padding:90px 30px;
+  }
+
+  .nav-menu a{
+    font-size:34px;
+    font-weight:700;
+  }
+
+  .menu-toggle:checked ~ .nav{
+    transform:translateX(0);
+  }
+
+  .menu-toggle:checked + .burger span:nth-child(1){
+    transform:translateY(10px) rotate(45deg);
+  }
+
+  .menu-toggle:checked + .burger span:nth-child(2){
+    opacity:0;
+  }
+
+  .menu-toggle:checked + .burger span:nth-child(3){
+    transform:translateY(-11px) rotate(-45deg);
+  }
+
+  .hero-title{
+    font-size:36px;
+    margin-bottom:30px;
+  }
+
+  .section-title{
+    font-size:30px;
+    margin-bottom:35px;
+  }
+
+  .skills-list{
+    gap:40px;
+  }
+
+  .socials{
+    gap:30px;
+  }
+
 }
