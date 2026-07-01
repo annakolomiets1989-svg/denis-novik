@@ -1,153 +1,206 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Denis Novik</title>
-</head>
-<body>
- 
- <header>
-    <div class="container">
-    <nav class="nav">
-        <ul class="nav-menu">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav class="nav">
+          <ul class="nav-menu">
             <li class="nav-item"><a href="index.html">Home</a></li>
             <li class="nav-item"><a href=".">About me</a></li>
             <li class="nav-item"><a href=".">Skills</a></li>
             <li class="nav-item"><a href=".">Portfolio</a></li>
             <li class="nav-item"><a href=".">Contacts</a></li>
-        </ul>
-    </nav>    
-    </div>
-</header>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-<main>
-<section class="hero">
-    <div class="container">
-        <h1 class="hero-title">Denis Novik</h1>
-        <img src="images/hero-photo.png" alt="Фото Denis Novik"/>        
-    </div>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1 class="hero-title">Denis Novik</h1>
+          <img src="images/hero-photo.png" alt="Фото Denis Novik" />
+        </div>
       </section>
 
-<section class="about">
-    <div class="container">
-    <h2 class="section-title">About me</h2>
-      <div class="about-content">
-    <p>
-        Hi, I'm Denis – UX/UI designer from Minsk.<br>
-        I'm interested in design and everything connected with it.
-    </p>
-    <p>
-        I'm studying at courses "Web and mobile design<br>
-        interfaces" in IT-Academy.
-    </p>
-    <p>
-        Ready to implement excellent projects<br>
-        with wonderful people.
-    </p>
+      <section class="about">
+        <div class="container">
+          <h2 class="section-title">About me</h2>
+          <div class="about-content">
+            <p>
+              Hi, I'm Denis – UX/UI designer from Minsk.<br />
+              I'm interested in design and everything connected with it.
+            </p>
+            <p>
+              I'm studying at courses "Web and mobile design<br />
+              interfaces" in IT-Academy.
+            </p>
+            <p>
+              Ready to implement excellent projects<br />
+              with wonderful people.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills">
+        <div class="skills-container">
+          <h2 class="section-title">Skills</h2>
+          <p class="section-text">I work in such programs as</p>
+          <ul class="skills-list">
+            <li class="skills-item">
+              <img
+                src="images/photoshop.svg"
+                alt="Adobe Photoshop"
+                class="skills-icon"
+              />
+              <span>Adobe Photoshop</span>
+              <img
+                src="images/ps-rating-icon.svg"
+                alt="Rsting star icon"
+                class="skills-rating"
+              />
+            </li>
+
+            <li class="skills-item">
+              <img
+                src="images/illustrator.svg"
+                alt="Adobe Illustrator"
+                class="skills-icon"
+              />
+              <span>Adobe Illustrator</span>
+              <img
+                src="images/ai-rating-icon.svg"
+                alt="Rating star icon"
+                class="skills-rating"
+              />
+            </li>
+
+            <li class="skills-item">
+              <img
+                src="images/after-effects.svg"
+                alt="Adobe After Effects"
+                class="skills-icon"
+              />
+              <span>Adobe After Effects</span>
+              <img
+                src="images/ae-rating-icon.svg"
+                alt="Rating star icon"
+                class="skills-rating"
+              />
+            </li>
+
+            <li class="skills-item">
+              <img
+                src="images/figma.svg"
+                alt="Figma"
+                class="skills-figma-icon"
+              />
+              <span>Figma</span>
+              <img
+                src="images/figma-rating-icon.svg"
+                alt="Rating star icon"
+                class="skills-rating"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="portfolio">
+        <div class="container">
+          <h2 class="section-title">Portfolio</h2>
+          <ul class="portfolio-list">
+            <li class="portfolio-item">
+              <img
+                src="images/fashion-store.png"
+                alt="Online fashion store homepage"
+              />
+              <a href=".">
+                Online fashion store -<br />
+                Homepage
+              </a>
+            </li>
+            <li class="portfolio-item">
+              <img src="images/reebok-store.png" alt="Reebok store homepage" />
+              <a href="."> Reebok Store - Concept </a>
+            </li>
+            <li class="portfolio-item">
+              <img src="images/braun-landing.png" alt="Braun landing page" />
+              <a href="."> Braun Landing Page - Concept </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <h2 class="footer-title">Contacts</h2>
+        <p>
+          Want to know more or just chat?<br />
+          You are welcome!
+        </p>
+        <button class="contact-button">Send message</button>
+        <ul class="socials">
+          <li class="socials-item">
+            <a href="." class="socials-link" aria-label="LinkedIn">
+              <img
+                src="images/linkedin.svg"
+                alt="Linkedin icon"
+                class="social-link-icon"
+              />
+            </a>
+          </li>
+
+          <li class="socials-item">
+            <a href="." class="socials-link" aria-label="Instagram">
+              <img
+                src="images/instagram.svg"
+                alt="Instagram icon"
+                class="social-link-icon"
+              />
+            </a>
+          </li>
+
+          <li class="socials-item">
+            <a href="." class="socials-link" aria-label="Behance">
+              <img
+                src="images/behance.svg"
+                alt="Behance icon"
+                class="social-link-icon"
+              />
+            </a>
+          </li>
+
+          <li class="socials-item">
+            <a href="." class="socials-link" aria-label="Dribbble">
+              <img
+                src="images/dribbble.svg"
+                alt="Dribbble icon"
+                class="social-link-icon"
+              />
+            </a>
+          </li>
+        </ul>
+        <p class="contact-text">
+          Like me on <br />
+          LinkedIn, Instagram, Behance, <br />
+          Dribbble
+        </p>
       </div>
-    </div>
-</section>
-
-<section class="skills">
-    <div class="skills-container">
-    <h2 class="section-title">Skills</h2>
-    <p class="section-text">I work in such programs as</p>
-    <ul class="skills-list">
-        <li class="skills-item">  
-        <img src="images/photoshop.svg" alt="Adobe Photoshop" class="skills-icon" />
-        <span>Adobe Photoshop</span>
-        <img src="images/ps-rating-icon.svg" alt="Rsting star icon" class="skills-rating">
-        </li>      
-        
-        <li class="skills-item">
-        <img src="images/illustrator.svg" alt="Adobe Illustrator" class="skills-icon" />
-        <span>Adobe Illustrator</span>
-        <img src="images/ai-rating-icon.svg" alt="Rating star icon" class="skills-rating">
-        </li>
-        
-        <li class="skills-item">
-        <img src="images/after-effects.svg" alt="Adobe After Effects" class="skills-icon" />
-        <span>Adobe After Effects</span>
-        <img src="images/ae-rating-icon.svg" alt="Rating star icon" class="skills-rating">
-        </li>
-        
-        <li class="skills-item">
-        <img src="images/figma.svg" alt="Figma" class="skills-figma-icon" />
-        <span>Figma</span>
-        <img src="images/figma-rating-icon.svg" alt="Rating star icon" class="skills-rating">
-        </li>
-    </ul>
-    </div>
-</section>
-
-<section class="portfolio">
-    <div class="container">
-    <h2 class="section-title">Portfolio</h2>
-    <ul class="portfolio-list">
-            <li class="portfolio-item">
-              <img src="images/fashion-store.png" alt="Online fashion store homepage"/>
-              <a href=".">
-                Online fashion store -<br> Homepage
-              </a> 
-            </li>                                         
-            <li class="portfolio-item">
-              <img src="images/reebok-store.png" alt="Reebok store homepage"/>
-              <a href=".">
-                Reebok Store - Concept
-              </a>
-            </li>                  
-            <li class="portfolio-item">
-              <img src="images/braun-landing.png" alt="Braun landing page"/>
-              <a href=".">
-                Braun Landing Page - Concept
-              </a>
-            </li>                          
-    </ul>
-    </div>
-</section>
-</main>
-
-<footer>
-   <div class="footer-container">
-    <h2 class="footer-title">Contacts</h2>
-    <p>Want to know more or just chat?<br> 
-    You are welcome!</p>
-    <button class="contact-button">
-    Send message
-    </button>
-    <ul class="socials">
-        <li class="socials-item">
-          <a href="." class="socials-link" aria-label="LinkedIn">
-            <img src="images/linkedin.svg" alt="Linkedin icon" class="social-link-icon" />
-          </a>
-        </li>
-
-        <li class="socials-item">
-          <a href="." class="socials-link" aria-label="Instagram">
-            <img src="images/instagram.svg" alt="Instagram icon" class="social-link-icon" />
-          </a>
-        </li>
-
-        <li class="socials-item">
-          <a href="." class="socials-link" aria-label="Behance">
-            <img src="images/behance.svg" alt="Behance icon" class="social-link-icon" />
-          </a>
-        </li>
-
-        <li class="socials-item">
-          <a href="." class="socials-link" aria-label="Dribbble">
-            <img src="images/dribbble.svg" alt="Dribbble icon" class="social-link-icon" />
-          </a>
-        </li>
-      </ul>
-      <p class="contact-text">
-        Like me on <br />
-        LinkedIn, Instagram, Behance, <br> Dribbble
-      </p>
-   </div> 
-</footer>
-
-</body>
+    </footer>
+  </body>
 </html>
